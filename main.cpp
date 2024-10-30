@@ -44,32 +44,34 @@ void DrawLine(int length) {
 //4) Write a function named hoursToSeconds that takes an integer parameter hours and returns the equivalent number of seconds.
 #include<iostream>
 using namespace std;
-void hourstoseconds(int hours);
+int hourstoseconds(int hours);
 
 int main() {
-	hourstoseconds(1);
+	hourstoseconds(2);
+	cout << hourstoseconds(2) << endl;
 }
 
-void hourstoseconds(int hours) {
-	cout << hours * 60 * 60 << endl; 
+int hourstoseconds(int hours) {
+	return hours * 60 * 60;
 }
 
 //5) Write a function named findMax that takes three integer parameters and returns the largest of the three.
 #include<iostream>
 using namespace std;
-void findmax(int a, int b, int c);
+int findmax(int a, int b, int c);
 int main() {
 	findmax(2, 7, 3);
+	cout << findmax(2, 7, 3) << endl;
 }
 
-void findmax(int a, int b, int c) {
+int findmax(int a, int b, int c) {
 	if ((a > c) && (a > b)) {
-		cout << a << endl;
+		return a;
 	}
 	if ((b > a) && (b > c)) {
-		cout << b << endl;
+		return b;
 	}
 	if ((c > a) && (c > b)) {
-		cout << c << endl;
+		return c;
 	}
 }
